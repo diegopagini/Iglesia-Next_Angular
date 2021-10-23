@@ -4,6 +4,7 @@ import { HeaderModule } from './header/header.module';
 import { BooksModule } from './books/books.module';
 import { SpinnerModule } from './spinner/spinner.module';
 import { FooterModule } from './footer/footer.module';
+import { CarouselModule } from './carousel/carousel.module';
 
 @NgModule({
   imports: [
@@ -12,7 +13,14 @@ import { FooterModule } from './footer/footer.module';
     BooksModule,
     SpinnerModule,
     FooterModule,
+    CarouselModule,
   ],
-  exports: [HeaderModule, BooksModule, SpinnerModule, FooterModule],
+  exports: [
+    HeaderModule,
+    BooksModule,
+    SpinnerModule,
+    FooterModule,
+    CarouselModule,
+  ],
 })
 export class ComponentsModule {}

@@ -1,0 +1,10 @@
+<ng-container *ngIf="bibles$ | async as bibles; else noBibles">
+  <swiper [config]="config">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" *ngFor="let bible of bibles.bibles"></div>
+    </div>
+  </swiper>
+</ng-container>
+<ng-template #noBibles>
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</ng-template>
