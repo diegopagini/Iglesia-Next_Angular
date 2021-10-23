@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   apiKey: '0ff128a4d4108a98ae0beda61d776bc2',
-  url: `https://api.biblia.com/v1/bible/content/RVR60.js?passage=John3.16&culture=es&key=0ff128a4d4108a98ae0beda61d776bc2`,
+  url: `https://api.biblia.com/v1/`,
 };
 
 /*
