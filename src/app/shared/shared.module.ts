@@ -13,6 +13,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatTreeModule } from '@angular/material/tree';
 
 @NgModule({
   imports: [
@@ -30,6 +31,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatProgressBarModule,
     MatToolbarModule,
     MatProgressSpinnerModule,
+    MatTreeModule,
   ],
   exports: [
     MatButtonModule,
@@ -45,6 +47,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatProgressBarModule,
     MatToolbarModule,
     MatProgressSpinnerModule,
+    MatTreeModule,
   ],
 })
 export class SharedModule {}

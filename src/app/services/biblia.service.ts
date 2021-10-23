@@ -33,6 +33,8 @@ export class BibliaService {
   }
 
   public getBooks(): Observable<Books> {
-    return this.http.get<Books>(`${baseUrl}/bible/contents/LEB?key=${apiKey}`);
+    return this.http.get<Books>(
+      `${baseUrl}/bible/contents/RVR60.js?culture=es&key=${apiKey}`
+    );
   }
 }

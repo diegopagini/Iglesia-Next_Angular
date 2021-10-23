@@ -1,0 +1,25 @@
+<ng-container *ngIf="books$ | async as books; else noBooks">
+  <mat-accordion>
+    <mat-expansion-panel hideToggle *ngFor="let book of books.books">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <strong>{{ book.passage }}</strong>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <section class="chapters">
+        <button
+          *ngFor="let chapter of book.chapters"
+          mat-button
+          color="primary"
+          (click)="searchChapter(chapter)"
+        >
+          {{ chapter.passage }}
+        </button>
+      </section>
+    </mat-expansion-panel>
+  </mat-accordion>
+</ng-container>
+
+<ng-template #noBooks>
+  <app-spinner></app-spinner>
+</ng-template>
