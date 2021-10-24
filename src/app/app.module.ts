@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PagesModule } from './pages/pages.module';
 import { ComponentsModule } from './components/components.module';
+import { SwiperModule } from 'swiper/angular';
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,6 +18,7 @@ import { ComponentsModule } from './components/components.module';
     BrowserAnimationsModule,
     PagesModule,
     ComponentsModule,
+    SwiperModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

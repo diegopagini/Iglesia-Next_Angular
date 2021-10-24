@@ -5,6 +5,7 @@ import { BooksModule } from './books/books.module';
 import { SpinnerModule } from './spinner/spinner.module';
 import { FooterModule } from './footer/footer.module';
 import { CarouselModule } from './carousel/carousel.module';
+import { BibleModule } from './bible/bible.module';
 
 @NgModule({
   imports: [
@@ -14,6 +15,7 @@ import { CarouselModule } from './carousel/carousel.module';
     SpinnerModule,
     FooterModule,
     CarouselModule,
+    BibleModule,
   ],
   exports: [
     HeaderModule,
@@ -21,6 +23,7 @@ import { CarouselModule } from './carousel/carousel.module';
     SpinnerModule,
     FooterModule,
     CarouselModule,
+    BibleModule,
   ],
 })
 export class ComponentsModule {}
