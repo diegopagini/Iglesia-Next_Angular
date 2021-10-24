@@ -1,4 +1,19 @@
 <app-header></app-header>
-<app-carousel></app-carousel>
-<app-books></app-books>
+<main class="container">
+  <mat-selection-list #options [multiple]="false">
+    <mat-list-option
+      *ngFor="let option of routerOptions"
+      [value]="option"
+      [routerLink]="option.link"
+    >
+      <mat-list-item
+        ><mat-icon class="icon" aria-hidden="false" aria-label="Icon">{{
+          option.icon
+        }}</mat-icon>
+        {{ option.name }}</mat-list-item
+      >
+      <mat-divider></mat-divider>
+    </mat-list-option>
+  </mat-selection-list>
+</main>
 <app-footer></app-footer>

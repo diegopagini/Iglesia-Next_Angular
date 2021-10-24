@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Bible } from 'src/app/interfaces/bibles.interface';
 
 @Component({
@@ -6,10 +6,6 @@ import { Bible } from 'src/app/interfaces/bibles.interface';
   templateUrl: './bible.component.html',
   styleUrls: ['./bible.component.scss'],
 })
-export class BibleComponent implements OnInit {
+export class BibleComponent {
   @Input() bible: Bible | undefined;
-
-  constructor() {}
-
-  ngOnInit(): void {}
 }

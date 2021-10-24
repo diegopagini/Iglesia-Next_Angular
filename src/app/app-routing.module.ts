@@ -12,6 +12,16 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/home/home.module').then((m) => m.HomeModule),
   },
+  {
+    path: 'bibles',
+    loadChildren: () =>
+      import('./pages/bibles/bibles.module').then((m) => m.BiblesModule),
+  },
+  {
+    path: 'content',
+    loadChildren: () =>
+      import('./pages/content/content.module').then((m) => m.ContentModule),
+  },
 ];
 
 @NgModule({

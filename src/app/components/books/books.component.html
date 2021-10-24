@@ -1,5 +1,5 @@
-<ng-container *ngIf="books$ | async as books; else noBooks">
-  <mat-accordion>
+<ng-container *ngIf="books">
+  <mat-accordion class="books">
     <mat-expansion-panel hideToggle *ngFor="let book of books.books">
       <mat-expansion-panel-header>
         <mat-panel-title>
@@ -19,9 +19,3 @@
     </mat-expansion-panel>
   </mat-accordion>
 </ng-container>
-
-<ng-template #noBooks>
-  <section class="chapters">
-    <app-spinner></app-spinner>
-  </section>
-</ng-template>
