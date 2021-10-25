@@ -1,6 +1,10 @@
 <mat-toolbar color="primary">
-  <mat-icon *ngIf="!isHomePage" aria-hidden="false" aria-label="Icon"
-    >book</mat-icon
+  <button
+    *ngIf="currentRoute !== '/home'"
+    mat-stroked-button
+    [routerLink]="['/home']"
   >
-  <span class="title">Biblia Online</span>
+    <mat-icon aria-hidden="false" aria-label="Icon">arrow_back </mat-icon>
+  </button>
+  <span class="title">Biblia Online </span>
 </mat-toolbar>

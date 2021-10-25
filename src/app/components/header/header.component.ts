@@ -1,28 +1,21 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { filter, take } from 'rxjs/operators';
+import { Component } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent implements OnInit {
-  public isHomePage: boolean = false;
+export class HeaderComponent {
+  public currentRoute: string | undefined;
 
-  constructor(private router: Router) {}
-
-  ngOnInit(): void {
+  constructor(private router: Router) {
     this.router.events
-      .pipe(filter(Boolean), take(1))
-      .subscribe((event: any) => {
-        const route = event.url;
-        console.log(event, route, this.isHomePage);
-        if (route === '/home') {
-          this.isHomePage = true;
-        } else {
-          this.isHomePage = false;
-        }
+      .pipe(filter((event: any) => event instanceof NavigationEnd))
+      .subscribe((event: { url: string }) => {
+        this.currentRoute = event.url;
+        console.log(this.currentRoute);
       });
   }
 }

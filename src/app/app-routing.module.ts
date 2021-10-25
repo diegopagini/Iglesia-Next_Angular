@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, UrlSerializer } from '@angular/router';
+import { HomeComponent } from './pages/home/home.component';
 
 const routes: Routes = [
   {
@@ -22,10 +23,25 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/content/content.module').then((m) => m.ContentModule),
   },
+  {
+    path: '**',
+    component: HomeComponent,
+  },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes, {
+      scrollPositionRestoration: 'enabled',
+      paramsInheritanceStrategy: 'always',
+      relativeLinkResolution: 'corrected',
+      malformedUriErrorHandler: (
+        error: URIError,
+        urlSerializer: UrlSerializer,
+        url: string
+      ) => urlSerializer.parse('/page-not-found'),
+    }),
+  ],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
