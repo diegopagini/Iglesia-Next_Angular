@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Bibles } from 'src/app/interfaces/bibles.interface';
+import { Books } from 'src/app/interfaces/books.interface';
 import { BibliaService } from 'src/app/services/biblia.service';
 
 @Component({
@@ -9,11 +9,11 @@ import { BibliaService } from 'src/app/services/biblia.service';
   styleUrls: ['./bibles.component.scss'],
 })
 export class BiblesComponent implements OnInit {
-  public bibles$: Observable<Bibles> | undefined;
+  public books$: Observable<Books> | undefined;
 
   constructor(private bibliaService: BibliaService) {}
 
   ngOnInit(): void {
-    this.bibles$ = this.bibliaService.getBibles();
+    this.books$ = this.bibliaService.getBooks();
   }
 }

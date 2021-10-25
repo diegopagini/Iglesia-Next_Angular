@@ -8,14 +8,9 @@ import { Component } from '@angular/core';
 export class HomeComponent {
   public routerOptions: any[] = [
     {
-      name: 'Biblias',
+      name: 'Biblia',
       icon: 'menu_book',
       link: '/bibles',
-    },
-    {
-      name: 'Contenido',
-      icon: 'book',
-      link: '/content',
     },
   ];
 }

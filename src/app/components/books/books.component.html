@@ -1,4 +1,14 @@
 <ng-container *ngIf="books">
+  <mat-card class="version"
+    ><div>Current version: {{ bibliaService.version }}</div>
+    <button mat-button class="center" routerLink="/content">
+      <mat-icon class="icon" aria-hidden="false" aria-label="Icon"
+        >book</mat-icon
+      >
+      <div>Change Version</div>
+    </button>
+  </mat-card>
+
   <mat-accordion class="books">
     <mat-expansion-panel hideToggle *ngFor="let book of books.books">
       <mat-expansion-panel-header>

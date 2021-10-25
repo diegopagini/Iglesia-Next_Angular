@@ -1,8 +1,13 @@
-.books {
-  margin: 0 auto;
-  max-width: 1440px;
+.version {
+  align-items: center;
+  display: flex !important;
+  justify-content: space-between;
 }
 
-.loading {
-  min-height: 100vh;
+.center {
+  .mat-button-wrapper {
+    align-items: center;
+    display: flex !important;
+    justify-content: center;
+  }
 }

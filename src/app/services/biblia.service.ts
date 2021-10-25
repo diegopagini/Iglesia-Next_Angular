@@ -14,11 +14,13 @@ const apiKey = environment.apiKey;
   providedIn: 'root',
 })
 export class BibliaService {
+  public version: string = 'RVR60';
+
   constructor(private http: HttpClient) {}
 
   public getSpecificVerse(passage: string = 'John3.16'): Observable<Passage> {
     return this.http.get<Passage>(
-      `${baseUrl}bible/content/RVR60.js?passage=${passage}&culture=es&key=${apiKey}`
+      `${baseUrl}bible/content/${this.version}.js?passage=${passage}&culture=es&key=${apiKey}`
     );
   }
 
@@ -28,13 +30,13 @@ export class BibliaService {
 
   public getSearch(query: string, limit: number = 20): Observable<Results> {
     return this.http.get<Results>(
-      `${baseUrl}/bible/search/LEB.txt?query=${query}&mode=verse&start=0&limit=${limit}&key=${apiKey}`
+      `${baseUrl}/bible/search/${this.version}.txt?query=${query}&mode=verse&start=0&limit=${limit}&key=${apiKey}`
     );
   }
 
   public getBooks(): Observable<Books> {
     return this.http.get<Books>(
-      `${baseUrl}/bible/contents/RVR60.js?culture=es&key=${apiKey}`
+      `${baseUrl}/bible/contents/${this.version}.js?culture=es&key=${apiKey}`
     );
   }
 }
