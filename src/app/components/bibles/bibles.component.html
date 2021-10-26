@@ -1,1 +1,5 @@
-<pre>{{ bibles | json }}</pre>
+<ng-container *ngIf="bibles">
+  <section class="bibles">
+    <app-bible *ngFor="let bible of bibles" [bible]="bible"></app-bible>
+  </section>
+</ng-container>

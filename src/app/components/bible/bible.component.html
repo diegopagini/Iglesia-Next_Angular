@@ -4,16 +4,14 @@
       <mat-card-title>{{ bible.title }}</mat-card-title>
       <mat-card-subtitle>{{ bible.publishers }}</mat-card-subtitle>
     </mat-card-header>
-    <img
-      class="bible-card__img"
-      mat-card-image
-      [src]="bible.imageUrl"
-      [alt]="bible.abbreviatedTitle"
-    />
-    <mat-card-content>
-      <p>
-        {{ bible.description | slice: 0:99
-        }}<span *ngIf="bible.description.length >= 99">...</span>
+    <mat-card-content class="bible-card__body">
+      <img
+        class="bible-card__img"
+        [src]="bible.imageUrl"
+        [alt]="bible.abbreviatedTitle"
+      />
+      <p class="bible-card__content">
+        {{ bible.description }}
       </p>
     </mat-card-content>
     <mat-card-actions> </mat-card-actions>

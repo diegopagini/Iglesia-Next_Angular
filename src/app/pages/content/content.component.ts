@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Bibles } from 'src/app/interfaces/bibles.interface';
+import { pluck } from 'rxjs/operators';
+import { Bible } from 'src/app/interfaces/bibles.interface';
 import { BibliaService } from 'src/app/services/biblia.service';
 
 @Component({
@@ -9,11 +10,11 @@ import { BibliaService } from 'src/app/services/biblia.service';
   styleUrls: ['./content.component.scss'],
 })
 export class ContentComponent implements OnInit {
-  public bibles$: Observable<Bibles> | undefined;
+  public bibles$: Observable<Bible[]> | undefined;
 
   constructor(private bibliaService: BibliaService) {}
 
   ngOnInit(): void {
-    this.bibles$ = this.bibliaService.getBibles();
+    this.bibles$ = this.bibliaService.getBibles().pipe(pluck('bibles'));
   }
 }

@@ -1,9 +1,5 @@
 <mat-toolbar color="primary">
-  <button
-    *ngIf="currentRoute !== '/home'"
-    mat-stroked-button
-    [routerLink]="['/home']"
-  >
+  <button *ngIf="!isHomePage" mat-raised-button [routerLink]="['/home']">
     <mat-icon aria-hidden="false" aria-label="Icon">arrow_back </mat-icon>
   </button>
   <span class="title">Biblia Online </span>

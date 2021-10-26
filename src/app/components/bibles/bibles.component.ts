@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Bibles } from 'src/app/interfaces/bibles.interface';
+import { Bible } from 'src/app/interfaces/bibles.interface';
 
 @Component({
   selector: 'app-bibles-select',
@@ -7,5 +7,5 @@ import { Bibles } from 'src/app/interfaces/bibles.interface';
   styleUrls: ['./bibles.component.scss'],
 })
 export class BiblesComponent {
-  @Input() bibles: Bibles | undefined;
+  @Input() bibles: Bible[] | undefined;
 }

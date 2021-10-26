@@ -1,3 +1,16 @@
 .bible-card {
-  max-width: 240px;
+  padding: 1rem;
+  margin: 1rem;
+  max-width: 100%;
+
+  &__body {
+    min-height: 250px;
+  }
+
+  &__img {
+    float: left;
+    height: fit-content;
+    margin: 0 0.5rem 0.5rem 0;
+    max-height: 240px;
+  }
 }
