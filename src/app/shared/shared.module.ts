@@ -15,6 +15,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTreeModule } from '@angular/material/tree';
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   imports: [
@@ -34,6 +35,7 @@ import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
     MatProgressSpinnerModule,
     MatTreeModule,
     MatBottomSheetModule,
+    MatDialogModule,
   ],
   exports: [
     MatButtonModule,
@@ -51,6 +53,7 @@ import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
     MatProgressSpinnerModule,
     MatTreeModule,
     MatBottomSheetModule,
+    MatDialogModule,
   ],
 })
 export class SharedModule {}

@@ -1,4 +1,7 @@
 .container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
   min-height: calc(100vh - 112px);
   margin: 0 auto;
   max-width: 1440px;

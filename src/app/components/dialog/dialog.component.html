@@ -1,0 +1,12 @@
+<section *ngIf="data" class="dialog">
+  <h3 class="dialog-title">{{ data.title }}</h3>
+  <p class="dialog-confirm">Do you want to set this version?</p>
+  <div class="dialog-actions">
+    <button mat-raised-button color="primary" (click)="setVersion(data)">
+      Ok
+    </button>
+    <button mat-raised-button color="warn" (click)="closeDialog()">
+      Cancel
+    </button>
+  </div>
+</section>

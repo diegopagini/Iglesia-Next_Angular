@@ -1,5 +1,7 @@
 import { Component, Input } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Bible } from 'src/app/interfaces/bibles.interface';
+import { DialogComponent } from '../dialog/dialog.component';
 
 @Component({
   selector: 'app-bible',
@@ -8,4 +10,12 @@ import { Bible } from 'src/app/interfaces/bibles.interface';
 })
 export class BibleComponent {
   @Input() bible: Bible | undefined;
+
+  constructor(private dialog: MatDialog) {}
+
+  public openDialog() {
+    this.dialog.open(DialogComponent, {
+      data: this.bible,
+    });
+  }
 }

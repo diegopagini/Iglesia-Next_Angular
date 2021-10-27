@@ -13,4 +13,11 @@
     margin: 0 0.5rem 0.5rem 0;
     max-height: 240px;
   }
+
+  &__button-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem 0;
+  }
 }

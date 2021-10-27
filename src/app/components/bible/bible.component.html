@@ -14,6 +14,10 @@
         {{ bible.description }}
       </p>
     </mat-card-content>
-    <mat-card-actions> </mat-card-actions>
+    <mat-card-actions class="bible-card__button-container">
+      <button mat-raised-button color="primary" (click)="openDialog()">
+        Set this version
+      </button>
+    </mat-card-actions>
   </mat-card>
 </ng-container>
