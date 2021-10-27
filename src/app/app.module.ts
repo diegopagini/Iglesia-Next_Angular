@@ -8,6 +8,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PagesModule } from './pages/pages.module';
 import { ComponentsModule } from './components/components.module';
 import { SwiperModule } from 'swiper/angular';
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
+import { passageReducer } from './store/reducers/passage.reducer';
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,6 +23,11 @@ import { SwiperModule } from 'swiper/angular';
     PagesModule,
     ComponentsModule,
     SwiperModule,
+    StoreModule.forRoot({ passage: passageReducer }),
+    StoreDevtoolsModule.instrument({
+      maxAge: 25,
+      logOnly: environment.production,
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],

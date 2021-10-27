@@ -20,6 +20,8 @@
     "@angular/platform-browser": "~12.2.0",
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
+    "@ngrx/store": "^12.5.1",
+    "@ngrx/store-devtools": "^12.5.1",
     "@types/swiper": "^5.4.3",
     "rxjs": "~6.6.0",
     "swiper": "^7.0.9",

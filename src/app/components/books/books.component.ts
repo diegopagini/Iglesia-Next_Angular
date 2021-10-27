@@ -1,6 +1,8 @@
 import { Component, Input, ViewEncapsulation } from '@angular/core';
+import { Router } from '@angular/router';
 import { Books, Chapter } from 'src/app/interfaces/books.interface';
 import { BibliaService } from 'src/app/services/biblia.service';
+import { StoreService } from 'src/app/services/store.service';
 
 @Component({
   selector: 'app-books',
@@ -12,9 +14,15 @@ export class BooksComponent {
   @Input() books: Books | undefined;
   public panelOpenState: boolean = false;
 
-  constructor(public bibliaService: BibliaService) {}
+  constructor(
+    public bibliaService: BibliaService,
+    private storeService: StoreService,
+    private router: Router
+  ) {}
 
   public searchChapter(chapter: Chapter) {
-    console.log(chapter);
+    const query = chapter.passage.replace(' ', '');
+    this.storeService.searchPassage(query);
+    this.router.navigateByUrl('/passage');
   }
 }

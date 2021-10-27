@@ -24,6 +24,11 @@ const routes: Routes = [
       import('./pages/content/content.module').then((m) => m.ContentModule),
   },
   {
+    path: 'passage',
+    loadChildren: () =>
+      import('./pages/passage/passage.module').then((m) => m.PassageModule),
+  },
+  {
     path: '**',
     component: HomeComponent,
   },
