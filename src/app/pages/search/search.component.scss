@@ -11,3 +11,14 @@
 .icon {
   padding-right: 0.5rem;
 }
+
+.input-container {
+  display: flex !important;
+  text-align: unset;
+  min-width: 100%;
+
+  .mat-form-field-wrapper {
+    margin: 1rem;
+    width: 100%;
+  }
+}

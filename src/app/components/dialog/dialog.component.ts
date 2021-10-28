@@ -17,13 +17,13 @@ export class DialogComponent {
     private router: Router
   ) {}
 
-  public setVersion(bible: Bible) {
+  setVersion(bible: Bible) {
     this.bibliaService.version = bible.abbreviatedTitle;
     this.closeDialog();
     this.router.navigateByUrl('/home');
   }
 
-  public closeDialog() {
+  closeDialog() {
     this.dialogRef.close();
   }
 }

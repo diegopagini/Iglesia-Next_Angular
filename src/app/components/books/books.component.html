@@ -1,31 +1,33 @@
 <ng-container *ngIf="books">
-  <mat-card class="version"
-    ><div>Current version: {{ bibliaService.version }}</div>
-    <button mat-button class="center" routerLink="/content">
-      <mat-icon class="icon" aria-hidden="false" aria-label="Icon"
-        >book</mat-icon
-      >
-      <div>Change Version</div>
-    </button>
-  </mat-card>
-
-  <mat-accordion class="books">
-    <mat-expansion-panel hideToggle *ngFor="let book of books.books">
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          <strong>{{ book.passage }}</strong>
-        </mat-panel-title>
-      </mat-expansion-panel-header>
-      <section class="chapters">
-        <button
-          *ngFor="let chapter of book.chapters"
-          mat-button
-          color="primary"
-          (click)="searchChapter(chapter)"
+  <section class="animated fadeIn">
+    <mat-card class="version"
+      ><div>Current version: {{ bibliaService.version }}</div>
+      <button mat-button class="center" routerLink="/content">
+        <mat-icon class="icon" aria-hidden="false" aria-label="Icon"
+          >book</mat-icon
         >
-          {{ chapter.passage }}
-        </button>
-      </section>
-    </mat-expansion-panel>
-  </mat-accordion>
+        <div>Change Version</div>
+      </button>
+    </mat-card>
+
+    <mat-accordion class="books">
+      <mat-expansion-panel hideToggle *ngFor="let book of books.books">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <strong>{{ book.passage }}</strong>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <section class="chapters">
+          <button
+            *ngFor="let chapter of book.chapters"
+            mat-button
+            color="primary"
+            (click)="searchChapter(chapter)"
+          >
+            {{ chapter.passage }}
+          </button>
+        </section>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </section>
 </ng-container>

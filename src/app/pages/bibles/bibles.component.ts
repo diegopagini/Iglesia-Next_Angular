@@ -9,7 +9,7 @@ import { BibliaService } from 'src/app/services/biblia.service';
   styleUrls: ['./bibles.component.scss'],
 })
 export class BiblesComponent implements OnInit {
-  public books$: Observable<Books> | undefined;
+  books$: Observable<Books> | undefined;
 
   constructor(private bibliaService: BibliaService) {}
 

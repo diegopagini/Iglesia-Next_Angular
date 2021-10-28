@@ -12,7 +12,7 @@ import { StoreService } from 'src/app/services/store.service';
 })
 export class BooksComponent {
   @Input() books: Books | undefined;
-  public panelOpenState: boolean = false;
+  panelOpenState: boolean = false;
 
   constructor(
     public bibliaService: BibliaService,
@@ -20,7 +20,7 @@ export class BooksComponent {
     private router: Router
   ) {}
 
-  public searchChapter(chapter: Chapter) {
+  searchChapter(chapter: Chapter) {
     const query = chapter.passage.replace(' ', '');
     this.storeService.searchPassage(query);
     this.router.navigateByUrl('/passage');

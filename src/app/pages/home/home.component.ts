@@ -6,11 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
-  public routerOptions: any[] = [
+  routerOptions: any[] = [
     {
       name: 'Biblia',
       icon: 'menu_book',
       link: '/bibles',
+    },
+    {
+      name: 'Buscar',
+      icon: 'search',
+      link: '/search',
     },
   ];
 }

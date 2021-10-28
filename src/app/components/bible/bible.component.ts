@@ -13,7 +13,7 @@ export class BibleComponent {
 
   constructor(private dialog: MatDialog) {}
 
-  public openDialog() {
+  openDialog() {
     this.dialog.open(DialogComponent, {
       data: this.bible,
     });

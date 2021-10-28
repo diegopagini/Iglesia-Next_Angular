@@ -11,8 +11,8 @@ import { BibliaService } from 'src/app/services/biblia.service';
   styleUrls: ['./passage.component.scss'],
 })
 export class PassageComponent implements OnInit {
-  public passage$: Observable<Passage> | undefined;
-  public search: string | undefined;
+  passage$: Observable<Passage> | undefined;
+  search: string | undefined;
 
   constructor(
     private bibliaService: BibliaService,

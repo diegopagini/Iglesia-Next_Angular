@@ -1,0 +1,22 @@
+<app-header></app-header>
+<main class="container">
+  <mat-form-field class="input-container" appearance="fill">
+    <mat-label>Buscar en la Biblia</mat-label>
+    <input
+      matInput
+      autocomplete="off"
+      [(ngModel)]="search"
+      (ngModelChange)="getSearch()"
+    />
+  </mat-form-field>
+
+  <section *ngIf="result$ | async as results" class="results">
+    <ng-container *ngIf="search.length > 0">
+      <div *ngFor="let result of results.results" class="animated fadeIn">
+        <h3>{{ result.title }}</h3>
+        <p>{{ result.preview }}</p>
+      </div>
+    </ng-container>
+  </section>
+</main>
+<app-footer></app-footer>
