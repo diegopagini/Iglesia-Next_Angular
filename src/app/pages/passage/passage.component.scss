@@ -1,0 +1,13 @@
+.title {
+  padding-left: 1rem;
+}
+
+.passage {
+  margin: 1rem;
+  min-height: calc(100% - 176px);
+  padding: 1rem;
+
+  @media screen and (min-width: 991px) {
+    min-height: calc(100% - 192px);
+  }
+}

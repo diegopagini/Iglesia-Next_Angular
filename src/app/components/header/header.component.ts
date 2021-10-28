@@ -8,18 +8,16 @@ import { filter } from 'rxjs/operators';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  public isHomePage: boolean | undefined;
+  public isHomePage: boolean = false;
 
   constructor(private router: Router) {
     this.router.events
       .pipe(filter((event: any) => event instanceof NavigationEnd))
       .subscribe((event: { url: string }) => {
         const route = event.url;
-        if (route === '/home') {
-          this.isHomePage = true;
-        } else {
-          this.isHomePage = false;
-        }
+        route === '/home'
+          ? (this.isHomePage = true)
+          : (this.isHomePage = false);
       });
   }
 }

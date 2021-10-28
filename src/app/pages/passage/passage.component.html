@@ -1,3 +1,14 @@
-<ng-container *ngIf="passage$ | async as passage">
-  {{ passage | json }}
-</ng-container>
+<mat-toolbar color="primary">
+  <button mat-raised-button [routerLink]="['/bibles']">
+    <mat-icon aria-hidden="false" aria-label="Icon">arrow_back</mat-icon>
+  </button>
+  <h2 class="title" *ngIf="search">{{ search }}</h2>
+</mat-toolbar>
+<mat-card class="passage">
+  <ng-container *ngIf="passage$ | async as passage">
+    <mat-card-content>
+      <p>{{ passage.text }}</p>
+    </mat-card-content>
+  </ng-container>
+</mat-card>
+<app-footer></app-footer>
