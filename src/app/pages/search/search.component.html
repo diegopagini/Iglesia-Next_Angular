@@ -2,13 +2,13 @@
 <main class="container">
   <mat-form-field class="input-container" appearance="fill">
     <mat-label>Buscar en la Biblia</mat-label>
-    <input
-      matInput
-      autocomplete="off"
-      [(ngModel)]="search"
-      (ngModelChange)="getSearch()"
-    />
+    <input matInput autocomplete="off" [(ngModel)]="search" />
   </mat-form-field>
+  <div class="button-container">
+    <button mat-raised-button color="primary" (click)="getSearch()">
+      Buscar
+    </button>
+  </div>
 
   <section *ngIf="result$ | async as results" class="results">
     <ng-container *ngIf="search.length > 0">
