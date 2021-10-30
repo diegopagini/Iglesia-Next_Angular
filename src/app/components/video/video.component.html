@@ -1,0 +1,23 @@
+<ng-container *ngIf="video">
+  <mat-card class="video-card animated fadeIn">
+    <mat-card-header>
+      <mat-card-title>{{ video.title }}</mat-card-title>
+      <mat-card-subtitle>{{ video.publishedAt | date }}</mat-card-subtitle>
+    </mat-card-header>
+    <img
+      mat-card-image
+      [src]="video.thumbnails?.high?.url"
+      [alt]="video.title"
+    />
+    <mat-card-content>
+      <p>
+        {{ video.description }}
+      </p>
+    </mat-card-content>
+    <mat-card-actions class="video-card__actions">
+      <button mat-raised-button color="primary" (click)="openDialog()">
+        Ver Video
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</ng-container>

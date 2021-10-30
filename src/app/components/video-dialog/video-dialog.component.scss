@@ -1,0 +1,10 @@
+.video-dialog {
+  height: 300px;
+  position: relative;
+  width: 100%;
+
+  @media screen and (min-width: 991px) {
+    height: 415px;
+    width: 500px;
+  }
+}

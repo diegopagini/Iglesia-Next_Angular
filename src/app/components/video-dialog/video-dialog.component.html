@@ -1,0 +1,22 @@
+<ng-container *ngIf="data as video; else loading">
+  <section class="video-dialog">
+    <iframe
+      width="100%"
+      height="100%"
+      [src]="youtubeUrl | safeDom"
+      frameborder="0"
+      allow="accelerometer;
+        autoplay;
+        clipboard-write;
+        encrypted-media;
+        gyroscope;
+        picture-in-picture"
+      allowfullscreen
+    >
+    </iframe>
+  </section>
+</ng-container>
+
+<ng-template #loading>
+  <app-spinner></app-spinner>
+</ng-template>

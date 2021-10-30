@@ -1,0 +1,13 @@
+.video-card {
+  margin: 1rem;
+
+  &__actions {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    button {
+      text-transform: uppercase;
+    }
+  }
+}

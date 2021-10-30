@@ -20,7 +20,7 @@ export class YoutubeService {
     const url = `${baseUrl}/playlistItems`;
     const params = new HttpParams()
       .set('part', 'snippet')
-      .set('maxResults', '10')
+      .set('maxResults', '100')
       .set('playlistId', playList)
       .set('key', apiKey);
     return this.http.get<YoutubeResponse>(url, { params }).pipe(
