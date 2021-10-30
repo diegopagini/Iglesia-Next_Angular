@@ -22,5 +22,10 @@ export class HomeComponent {
       icon: 'smart_display',
       link: '/videos',
     },
+    {
+      name: 'Ubicación',
+      icon: 'location_on',
+      link: '/location',
+    },
   ];
 }

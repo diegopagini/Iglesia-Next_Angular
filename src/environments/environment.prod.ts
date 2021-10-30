@@ -5,4 +5,6 @@ export const environment = {
   youtubeUrl: 'https://www.googleapis.com/youtube/v3',
   youtubeApiKey: 'AIzaSyDuWH9T19U1gP_5Tsuw6IOe2ho5eN5oIEc',
   youtubePlaylist: 'UUYXswPQ3e40WBfereAPTcQw',
+  mapBoxApiKey:
+    'pk.eyJ1IjoiZGllZ29wYWdpbmkiLCJhIjoiY2t1Y3VmYjJtMTFwZTJ1bXZ1cjdieTF5aCJ9._1A2cft6ihGe1DUIkNPmDw',
 };

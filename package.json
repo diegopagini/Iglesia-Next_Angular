@@ -23,6 +23,7 @@
     "@ngrx/store": "^12.5.1",
     "@ngrx/store-devtools": "^12.5.1",
     "@types/swiper": "^5.4.3",
+    "mapbox-gl": "^2.5.1",
     "rxjs": "~6.6.0",
     "swiper": "^7.0.9",
     "tslib": "^2.3.0",
