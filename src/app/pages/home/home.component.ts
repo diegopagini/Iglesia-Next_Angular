@@ -17,5 +17,10 @@ export class HomeComponent {
       icon: 'search',
       link: '/search',
     },
+    {
+      name: 'Videos',
+      icon: 'smart_display',
+      link: '/videos',
+    },
   ];
 }

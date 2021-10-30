@@ -34,6 +34,11 @@ const routes: Routes = [
       import('./pages/passage/passage.module').then((m) => m.PassageModule),
   },
   {
+    path: 'videos',
+    loadChildren: () =>
+      import('./pages/videos/videos.module').then((m) => m.VideosModule),
+  },
+  {
     path: '**',
     component: HomeComponent,
   },

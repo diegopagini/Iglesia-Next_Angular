@@ -7,8 +7,8 @@ import { Bibles } from '../interfaces/bibles.interface';
 import { Results } from '../interfaces/results.interface';
 import { Books } from '../interfaces/books.interface';
 
-const baseUrl = environment.url;
-const apiKey = environment.apiKey;
+const baseUrl = environment.bibleUrl;
+const apiKey = environment.bibleApiKey;
 
 @Injectable({
   providedIn: 'root',
