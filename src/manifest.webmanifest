@@ -1,8 +1,8 @@
 {
-  "name": "biblia",
-  "short_name": "biblia",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "name": "Next",
+  "short_name": "Next",
+  "theme_color": "#4052b5",
+  "background_color": "#4052b5",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",

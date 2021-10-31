@@ -1,0 +1,26 @@
+<app-header></app-header>
+<mat-list class="container">
+  <h3>Para apoyar con diezmos y ofrendas a Iglesia Next</h3>
+
+  <div class="copy-value">
+    <span>{{ value }}</span>
+    <button mat-button [cdkCopyToClipboard]="value" (click)="showSnack()">
+      <mat-icon class="icon" aria-hidden="false" aria-label="Icon"
+        >content_copy</mat-icon
+      >
+    </button>
+  </div>
+  <p>(Costa del Sol)</p>
+
+  <mat-divider style="width: 100%"></mat-divider>
+
+  <div class="copy-value">
+    <span>Paypal</span>
+    <a mat-button [href]="paypal" target="_blank">
+      <mat-icon class="icon" aria-hidden="false" aria-label="Icon"
+        >ads_click</mat-icon
+      >
+    </a>
+  </div>
+</mat-list>
+<app-footer></app-footer>

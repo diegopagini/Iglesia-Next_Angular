@@ -44,6 +44,13 @@ const routes: Routes = [
       import('./pages/location/location.module').then((m) => m.LocationModule),
   },
   {
+    path: 'contributions',
+    loadChildren: () =>
+      import('./pages/contributions/contributions.module').then(
+        (m) => m.ContributionsModule
+      ),
+  },
+  {
     path: '**',
     component: HomeComponent,
   },

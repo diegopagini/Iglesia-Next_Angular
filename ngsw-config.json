@@ -26,5 +26,20 @@
         ]
       }
     }
+  ],
+  "dataGroups": [
+    {
+      "name": "biblia-api",
+      "urls": [
+        "https://api.biblia.com/v1//bible/contents/RVR60.js?culture=es&key=0ff128a4d4108a98ae0beda61d776bc2",
+        "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=100&playlistId=UUYXswPQ3e40WBfereAPTcQw&key=AIzaSyDuWH9T19U1gP_5Tsuw6IOe2ho5eN5oIEc"
+      ],
+      "cacheConfig": {
+        "maxSize": 20,
+        "maxAge": "1h",
+        "timeout": "5s",
+        "strategy": "freshness"
+      }
+    }
   ]
 }

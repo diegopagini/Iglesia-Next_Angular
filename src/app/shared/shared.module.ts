@@ -16,6 +16,10 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTreeModule } from '@angular/material/tree';
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { MatDialogModule } from '@angular/material/dialog';
+import { ClipboardModule } from '@angular/cdk/clipboard';
+import { A11yModule } from '@angular/cdk/a11y';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   imports: [
@@ -36,6 +40,10 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatTreeModule,
     MatBottomSheetModule,
     MatDialogModule,
+    ClipboardModule,
+    A11yModule,
+    MatDividerModule,
+    MatSnackBarModule,
   ],
   exports: [
     MatButtonModule,
@@ -54,6 +62,10 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatTreeModule,
     MatBottomSheetModule,
     MatDialogModule,
+    ClipboardModule,
+    A11yModule,
+    MatDividerModule,
+    MatSnackBarModule,
   ],
 })
 export class SharedModule {}
