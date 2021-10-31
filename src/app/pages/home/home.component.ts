@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -32,10 +33,26 @@ export class HomeComponent implements OnInit {
       icon: 'volunteer_activism',
       link: '/contributions',
     },
+    {
+      name: 'Más información',
+      icon: 'info',
+      link: '/information',
+    },
+    {
+      name: 'Peticiones de oración',
+      icon: 'support_agent',
+      link: '/prayer',
+    },
   ];
+
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
     this.sortRouterOptions();
+  }
+
+  goTo(route: string) {
+    this.router.navigate([route], { replaceUrl: true });
   }
 
   private sortRouterOptions() {

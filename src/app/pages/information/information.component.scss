@@ -6,29 +6,25 @@
   margin: 0 auto;
   max-width: 1440px;
   min-height: calc(100% - 112px);
-  padding: 0 1rem;
 
   @media screen and (min-width: 991px) {
     min-height: calc(100% - 128px);
   }
 
   h3 {
-    margin-top: 3rem;
-    text-align: center;
+    margin: 3rem 0;
   }
 
-  .copy-value {
-    align-items: center;
-    display: flex;
+  a {
+    color: #000;
+    cursor: pointer;
     font-size: 1.25rem;
-    padding: 1rem 0;
-
-    button {
-      cursor: pointer;
-    }
+    text-decoration: none;
+    margin: 1rem 0;
   }
 
-  p {
-    margin-top: -1rem;
+  i {
+    font-size: 1.25rem;
+    padding-left: 0.5rem;
   }
 }

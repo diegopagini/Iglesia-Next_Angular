@@ -1,5 +1,5 @@
 <section class="video-list">
-  <ng-container *ngIf="videos; else loading">
+  <ng-container *ngIf="videos$ | async as videos; else loading">
     <ng-container *ngFor="let video of videos">
       <app-video [video]="video"></app-video>
     </ng-container>

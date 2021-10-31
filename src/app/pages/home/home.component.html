@@ -4,7 +4,7 @@
     <mat-list-option
       *ngFor="let option of routerOptions"
       [value]="option"
-      [routerLink]="option.link"
+      (click)="goTo(option.link)"
     >
       <mat-list-item
         ><mat-icon class="icon" aria-hidden="false" aria-label="Icon">{{

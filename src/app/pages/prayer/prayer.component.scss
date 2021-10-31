@@ -1,4 +1,4 @@
-.container {
+.wrapper {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -7,6 +7,7 @@
   max-width: 1440px;
   min-height: calc(100% - 112px);
   padding: 0 1rem;
+  text-align: center;
 
   @media screen and (min-width: 991px) {
     min-height: calc(100% - 128px);
@@ -14,21 +15,19 @@
 
   h3 {
     margin-top: 3rem;
-    text-align: center;
   }
 
-  .copy-value {
-    align-items: center;
-    display: flex;
-    font-size: 1.25rem;
-    padding: 1rem 0;
+  .prayer {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
 
-    button {
-      cursor: pointer;
+    .mat-button-wrapper {
+      align-items: center;
+      display: flex;
     }
-  }
 
-  p {
-    margin-top: -1rem;
+    mat-icon {
+      padding: 0 0.5rem;
+    }
   }
 }

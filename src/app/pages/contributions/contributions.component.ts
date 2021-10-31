@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {
   MatSnackBar,
   MatSnackBarHorizontalPosition,
@@ -11,7 +11,7 @@ import { SnackBarComponent } from 'src/app/components/snack-bar/snack-bar.compon
   templateUrl: './contributions.component.html',
   styleUrls: ['./contributions.component.scss'],
 })
-export class ContributionsComponent implements OnInit {
+export class ContributionsComponent {
   value = 'ES8321002527480210080633';
   paypal = 'http://paypal.me/iglesianextonline';
   durationInSeconds = 3;
@@ -19,8 +19,6 @@ export class ContributionsComponent implements OnInit {
   verticalPosition: MatSnackBarVerticalPosition = 'top';
 
   constructor(private snackBar: MatSnackBar) {}
-
-  ngOnInit(): void {}
 
   showSnack() {
     this.snackBar.openFromComponent(SnackBarComponent, {

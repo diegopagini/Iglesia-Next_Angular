@@ -1,6 +1,5 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Subject } from 'rxjs';
-import { takeUntil } from 'rxjs/operators';
+import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Video } from 'src/app/interfaces/youtube.interface';
 import { YoutubeService } from 'src/app/services/youtube.service';
 
@@ -9,9 +8,8 @@ import { YoutubeService } from 'src/app/services/youtube.service';
   templateUrl: './videos-list.component.html',
   styleUrls: ['./videos-list.component.scss'],
 })
-export class VideosListComponent implements OnInit, OnDestroy {
-  videos: Video[] = [];
-  private unsubscribe$ = new Subject<void>();
+export class VideosListComponent implements OnInit {
+  videos$!: Observable<Video[]>;
 
   constructor(private youtubeService: YoutubeService) {}
 
@@ -20,16 +18,6 @@ export class VideosListComponent implements OnInit, OnDestroy {
   }
 
   loadVideos() {
-    this.youtubeService
-      .getVideos()
-      .pipe(takeUntil(this.unsubscribe$))
-      .subscribe((response: any[]) => {
-        this.videos.push(...response);
-      });
-  }
-
-  ngOnDestroy(): void {
-    this.unsubscribe$.next();
-    this.unsubscribe$.complete();
+    this.videos$ = this.youtubeService.getVideos();
   }
 }

@@ -51,6 +51,18 @@ const routes: Routes = [
       ),
   },
   {
+    path: 'information',
+    loadChildren: () =>
+      import('./pages/information/information.module').then(
+        (m) => m.InformationModule
+      ),
+  },
+  {
+    path: 'prayer',
+    loadChildren: () =>
+      import('./pages/prayer/prayer.module').then((m) => m.PrayerModule),
+  },
+  {
     path: '**',
     component: HomeComponent,
   },
