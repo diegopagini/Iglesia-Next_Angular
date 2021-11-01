@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes, UrlSerializer } from '@angular/router';
+import { LoadPassageGuard } from './guards/load-passage.guard';
 import { HomeComponent } from './pages/home/home.component';
 
 const routes: Routes = [
@@ -32,6 +33,7 @@ const routes: Routes = [
     path: 'passage',
     loadChildren: () =>
       import('./pages/passage/passage.module').then((m) => m.PassageModule),
+    canActivate: [LoadPassageGuard],
   },
   {
     path: 'videos',

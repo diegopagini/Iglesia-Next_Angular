@@ -6,9 +6,13 @@ import { setPassage } from '../store/actions/passage.actions';
   providedIn: 'root',
 })
 export class StoreService {
-  constructor(private store: Store) {}
+  constructor(private store: Store<{ passage: string }>) {}
 
   public searchPassage(passage: string) {
     this.store.dispatch(setPassage({ payload: passage }));
+  }
+
+  public checkStore() {
+    return this.store.select('passage');
   }
 }
