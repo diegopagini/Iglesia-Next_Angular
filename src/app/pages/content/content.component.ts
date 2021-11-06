@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { pluck } from 'rxjs/operators';
 import { Bible } from 'src/app/interfaces/bibles.interface';
 import { BibliaService } from 'src/app/services/biblia.service';
 
@@ -15,6 +14,6 @@ export class ContentComponent implements OnInit {
   constructor(private bibliaService: BibliaService) {}
 
   ngOnInit(): void {
-    this.bibles$ = this.bibliaService.getBibles().pipe(pluck('bibles'));
+    this.bibles$ = this.bibliaService.getBibles();
   }
 }

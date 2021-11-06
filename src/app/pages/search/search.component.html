@@ -5,18 +5,21 @@
     <input matInput autocomplete="off" [(ngModel)]="search" />
   </mat-form-field>
   <div class="button-container">
-    <button mat-raised-button color="primary" (click)="getSearch()">
+    <button
+      mat-raised-button
+      [disabled]="loading$ | async"
+      color="primary"
+      (click)="getSearch()"
+    >
       Buscar
     </button>
   </div>
 
   <section *ngIf="result$ | async as results" class="results">
-    <ng-container *ngIf="search.length > 0">
-      <div *ngFor="let result of results.results" class="animated fadeIn">
-        <h3>{{ result.title }}</h3>
-        <p>{{ result.preview }}</p>
-      </div>
-    </ng-container>
+    <div *ngFor="let result of results.results" class="animated fadeIn">
+      <h3>{{ result.title }}</h3>
+      <p>{{ result.preview }}</p>
+    </div>
   </section>
 </main>
 <app-footer></app-footer>

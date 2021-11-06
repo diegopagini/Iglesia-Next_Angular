@@ -10,8 +10,7 @@ const mapBoxApiKey = environment.mapBoxApiKey;
   styleUrls: ['./location.component.scss'],
 })
 export class LocationComponent implements OnInit {
-  @ViewChild('mapa', { static: true }) mapa!: ElementRef;
-  constructor() {}
+  @ViewChild('mapa', { static: true }) mapa: ElementRef | undefined;
 
   ngOnInit(): void {
     const lat = Number(36.53762600149933);
@@ -19,7 +18,7 @@ export class LocationComponent implements OnInit {
 
     mapboxgl.accessToken = mapBoxApiKey;
     const map = new mapboxgl.Map({
-      container: this.mapa.nativeElement,
+      container: this.mapa?.nativeElement,
       style: 'mapbox://styles/mapbox/streets-v11',
       center: [lng, lat],
       zoom: 15,

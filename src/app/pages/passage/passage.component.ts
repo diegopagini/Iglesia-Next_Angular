@@ -37,11 +37,14 @@ export class PassageComponent implements OnInit {
     if (this.search) {
       const str = this.search.split('');
       for (let i = 0; i < str.length; i++) {
-        if (str[0].match('[0-9]')) {
-          str[0] = str[0] + ' ';
+        if (str[i].match('[0-9]')) {
+          str[i] = ' ' + str[i] + ' ';
         }
       }
-      this.search = str.join('');
+      // trim the withe spaces between the numbers in the string
+      const regex = /(\d)\s+(?=\d)/g;
+      const subst = `$1`;
+      this.search = str.join('').replace(regex, subst);
     }
   }
 }
